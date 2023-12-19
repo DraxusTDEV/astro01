@@ -1,5 +1,7 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "Sobre mi!!!";
 
@@ -35,7 +37,7 @@ const textCase = "upperCase";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
+        <style define:vars={{ skillColor, fontWeight, textCase }}>
             h1 {
                 color: purple;
                 font-size: 4rem;
@@ -51,9 +53,7 @@ const textCase = "upperCase";
     </head>
 
     <body>
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 
         <h1>{pageTitle}</h1>
         <h2>... ¡y mi nuevo sitio Astro!</h2>
@@ -95,5 +95,7 @@ const textCase = "upperCase";
                 <p>Mi objetivo no son 3 días.</p>
             )
         }
+
+        <Footer />
     </body>
 </html>
